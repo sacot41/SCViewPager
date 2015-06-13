@@ -8,25 +8,25 @@ Jazz Hands library provided by IFTTT : https://github.com/IFTTT/JazzHands
 
 First, add SCViewPager to your project. Create an activity with the viewPage and the views you want to animate.
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools" 			android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	tools:context=".MainActivity">
 
-    <com.dev.sacot41.myresume.SCViewPager
-        android:id="@+id/viewpager_main_activity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </com.dev.sacot41.myresume.SCViewPager>
+    	<com.dev.sacot41.myresume.SCViewPager
+        	android:id="@+id/viewpager_main_activity"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent">
+    	</com.dev.sacot41.myresume.SCViewPager>
 
-    <TextView
-        android:id="@+id/textview_to_animate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="@string/textview_bonjour"/>
+    	<TextView
+        	android:id="@+id/textview_to_animate"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:background="@color/white"
+        	android:text="@string/textview_bonjour"/>
 
-</RelativeLayout>
+	</RelativeLayout>
 
 Retrive view and add animation after you have set viewPager and his adapter.
 
