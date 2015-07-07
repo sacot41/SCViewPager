@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    tools:context=".MainActivity">
+
+    <com.dev.sacot41.scviewpager.SCViewPager
+        android:id="@+id/viewpager_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.dev.sacot41.scviewpager.SCViewPager>
+
+    <com.dev.sacot41.scviewpager.DotsView
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/dotsview_main"
+    />
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_name_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="50dp"
+        android:layout_alignParentTop="true"
+        android:rotation="-10"
+        android:src="@drawable/name_tag"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_currently_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="225dp"
+        android:src="@drawable/currently_work"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_at_skex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:src="@drawable/at_skex_2"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_commonly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/commonly"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_django_python"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/django_python"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mobile"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/but"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_diploma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/diploma"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_why"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/why"/>
+
+   <ImageView
+       android:id="@+id/imageview_main_future"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:src="@drawable/future"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_arduino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageview_main_future"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/arduino"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_raspberry_pi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageview_main_arduino"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/raspberry_pi_logo"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_connected_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/connect_device"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_check_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/check_out"/>
+
+    <TextView
+        android:id="@+id/textview_main_github_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/theme_700"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageview_main_check_out"
+        android:autoLink="web"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:text="https://github.com/sacot41"/>
+
+    <TextView
+        android:id="@+id/textview_main_linkedin_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/theme_700"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/textview_main_github_link"
+        android:autoLink="web"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:text="https://ca.linkedin.com/pub/samuel-côté/62/211/22a"/>
+
+
+
+</RelativeLayout>

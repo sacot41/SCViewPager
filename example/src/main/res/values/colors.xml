@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="theme_500">#607D8B</color>
+    <color name="theme_100">#CFD8DC</color>
+    <color name="theme_700">#455A64</color>
+
+    <color name="accent_A100">#FF8A80</color>
+    <color name="accent_A200">#FF5252</color>
+    <color name="accent_A400">#FF1744</color>
+
+</resources>
