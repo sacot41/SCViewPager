@@ -1,5 +1,5 @@
 # SCViewPager
-_Andy wants to jazz_
+_Jazz score for android_
 
 A simple ViewPager extends that provide scroll based animation like Jazz Hands for iOS. 
 Jazz Hands library provided by IFTTT : https://github.com/IFTTT/JazzHands
@@ -29,10 +29,13 @@ First, add SCViewPager to your project. Create an activity with the viewPage and
 	</RelativeLayout>
 
 Retrive view and add animation after you have set viewPager and his adapter.
-
+		
+        Point size = SCViewAnimationUtil.getDisplaySize(this);
+        
 		View view = findViewById(R.id.textview_to_animate);
         SCViewAnimation viewAnimation = new SCViewAnimation(view);
-        viewAnimation.addPageAnimation(new SCPositionAnimation(0,500,1000));
-        viewAnimation.addPageAnimation(new SCSizeAnimation(0, 1.5f, 1.5f));
-        viewAnimation.addPageAnimation(new SCPositionAnimation(1, -1000,0));
+        viewAnimation.startToPosition((int)(size.x*1.5), null);
+        viewAnimation.addPageAnimation(new SCPositionAnimation(this, 0, -(int)(size.x*1.5), 0));
         mViewPager.addAnimation(viewAnimation);
+        
+
