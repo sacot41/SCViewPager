@@ -36,7 +36,6 @@ public class MainActivity extends FragmentActivity {
         mDotsView.setDotRessource(R.drawable.dot_selected, R.drawable.dot_unselected);
         mDotsView.setNumberOfPage(NUM_PAGES);
 
-        //mPageAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPageAdapter = new SCViewPagerAdapter(getSupportFragmentManager());
         mPageAdapter.setNumberOfPage(NUM_PAGES);
         mPageAdapter.setFragmentBackgroundColor(R.color.theme_100);
@@ -56,11 +55,7 @@ public class MainActivity extends FragmentActivity {
             public void onPageScrollStateChanged(int state) {
             }
         });
-/*
-        Display display = getWindowManager().getDefaultDisplay();
-        final Point size = new Point();
-        display.getSize(size);
-*/
+
         final Point size = SCViewAnimationUtil.getDisplaySize(this);
 
         View nameTag = findViewById(R.id.imageview_main_activity_name_tag);
@@ -74,9 +69,6 @@ public class MainActivity extends FragmentActivity {
         mViewPager.addAnimation(currentlyWorkAnimation);
 
         View atSkex = findViewById(R.id.imageview_main_activity_at_skex);
-        /*ensure that getHeight function return data*/
-        //atSkex.measure( View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),  View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-       // atSkex.layout(0, 0, atSkex.getMeasuredWidth(), atSkex.getMeasuredHeight());
         SCViewAnimationUtil.prepareViewToGetSize(atSkex);
         SCViewAnimation atSkexAnimation = new SCViewAnimation(atSkex);
         atSkexAnimation.addPageAnimation(new SCPositionAnimation(getApplicationContext(), 0, 0, -( size.y - atSkex.getHeight() )));
@@ -171,53 +163,5 @@ public class MainActivity extends FragmentActivity {
         githubAnimation.addPageAnimation(new SCPositionAnimation(this, 3, -size.x, 0));
         mViewPager.addAnimation(githubAnimation);
     }
-/*
-    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
-
-        private ResumeFragment fragmentOne;
-        private ResumeFragment fragmentTwo;
-        private ResumeFragment fragmentThree;
-        private ResumeFragment fragmentFour;
-        private ResumeFragment fragmentFive;
-
-        public ScreenSlidePagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            if (fragmentOne == null)    fragmentOne = new ResumeFragment();
-            if (fragmentTwo == null)    fragmentTwo = new ResumeFragment();
-            if (fragmentThree == null)  fragmentThree = new ResumeFragment();
-            if (fragmentFour == null)   fragmentFour = new ResumeFragment();
-            if (fragmentFive == null)   fragmentFive = new ResumeFragment();
-
-            fragmentOne.setBackground(R.color.theme_100);
-            fragmentTwo.setBackground(R.color.theme_100);
-            fragmentThree.setBackground(R.color.theme_100);
-            fragmentFour.setBackground(R.color.theme_100);
-            fragmentFive.setBackground(R.color.theme_100);
-
-            switch (position){
-                case 0:
-                    return fragmentOne;
-                case 1:
-                    return fragmentTwo;
-                case 2:
-                    return fragmentThree;
-                case 3:
-                    return fragmentFour;
-                case 4:
-                    return fragmentFive;
-                default:
-                    return new ResumeFragment();
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return NUM_PAGES;
-        }
-    }*/
 
 }
