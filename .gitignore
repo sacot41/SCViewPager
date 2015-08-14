@@ -4,3 +4,5 @@
 /.idea/libraries
 .DS_Store
 /build
+/key
+/keystore_scviewpager_example
