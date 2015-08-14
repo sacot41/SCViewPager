@@ -1,5 +1,5 @@
 # SCViewPager
-_Jazz score for android_
+_Jazz for android_
 
 A simple ViewPager extends that provide scroll based animation like Jazz Hands for iOS. 
 Jazz Hands library provided by IFTTT : https://github.com/IFTTT/JazzHands
