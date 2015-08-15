@@ -6,6 +6,11 @@ Jazz Hands library provided by IFTTT : https://github.com/IFTTT/JazzHands
 
 ![alt tag](https://github.com/sacot41/SCViewPager/blob/master/example_2.gif?raw=true)
 
+# Install
+
+With Gradle (JCenter)
+	compile 'com.dev.sacot41:sc-viewpager:0.0.3'
+
 # Start
 
 First, add SCViewPager to your project. Create an activity with the viewPage and the views you want to animate.
@@ -42,5 +47,4 @@ Retrive view and add animation after you have set viewPager and his adapter.
         
 # Disclosure
 
-This project is not yet implemented in a real app and it's hasn't the pretension to implement all feature provided by JazzHand on IOS; this projects is a pretext to me to better understand animation based on scrollview (viewpager) and publish my first library on Jcenter. 
-       
+This project is not yet implemented in a real app and it's hasn't the pretension to implement all feature provided by JazzHand on IOS; this projects is a pretext to me to better understand animation based on scrollview (viewpager) and publish my first library on Jcenter.
