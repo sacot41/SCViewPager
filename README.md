@@ -8,8 +8,9 @@ Jazz Hands library provided by IFTTT : https://github.com/IFTTT/JazzHands
 
 # Install
 
-With Gradle (JCenter)
-	compile 'com.dev.sacot41:sc-viewpager:0.0.3'
+With Gradle (JCenter):
+
+		compile 'com.dev.sacot41:sc-viewpager:0.0.3'
 
 # Start
 
