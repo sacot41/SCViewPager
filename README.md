@@ -12,7 +12,7 @@ Jazz Hands library provided by IFTTT : https://github.com/IFTTT/JazzHands
 
 With Gradle (JCenter):
 
-		compile 'com.dev.sacot41:sc-viewpager:0.0.3'
+		compile "com.dev.sacot41:scviewpager:0.0.4"
 
 # Start
 
