@@ -56,6 +56,6 @@ viewAnimation.addPageAnimation(new SCPositionAnimation(this, 0, -(int)(size.x*1.
 mViewPager.addAnimation(viewAnimation);
 ```
 
-# Disclosure
+# Disclaimer
 
 This project is not yet implemented in a real app and it's hasn't the pretension to implement all feature provided by JazzHand on IOS; this projects is a pretext to me to better understand animation based on scrollview (viewpager) and publish my first library on Jcenter.
