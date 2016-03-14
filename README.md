@@ -60,4 +60,4 @@ mViewPager.addAnimation(viewAnimation);
 
 This project is not yet implemented in a real app and it's hasn't the pretension to implement all feature provided by JazzHand on IOS; this projects is a pretext to me to better understand animation based on scrollview (viewpager) and publish my first library on Jcenter.
 
-If you want a more complet library, heck Nightonke library, he add more animation and correct some bug : https://github.com/Nightonke/WoWoViewPager.
+If you want a more complete library, heck Nightonke library, he add more animation and correct some bug : https://github.com/Nightonke/WoWoViewPager.
