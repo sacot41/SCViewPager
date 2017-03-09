@@ -28,11 +28,11 @@ First, add SCViewPager to your project. Create an activity with the viewPage and
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
 
-	<com.dev.sacot41.myresume.SCViewPager
+	<com.dev.sacot41.scviewpager.SCViewPager
         android:id="@+id/viewpager_main_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-	</com.dev.sacot41.myresume.SCViewPager>
+	</com.dev.sacot41.scviewpager.SCViewPager>
 
 	<TextView
         android:id="@+id/textview_to_animate"
