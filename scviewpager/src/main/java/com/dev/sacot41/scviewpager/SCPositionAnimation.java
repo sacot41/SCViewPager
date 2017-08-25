@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 
 public class SCPositionAnimation extends SCPageAnimation {
 
-    public int xPosition;
-    public int yPosition;
+    public int xPosition;// 第page页需要移动的x值
+    public int yPosition;// 第page页需要移动的y值
 
     private float xStartPosition;
     private float yStartPosition;
@@ -26,20 +26,27 @@ public class SCPositionAnimation extends SCPageAnimation {
         this.page = forPage;
         this.xPosition = dx;
         this.yPosition = dy;
-        this.xStartPosition = -1;
-        this.yStartPosition = -1;
+        this.xStartPosition = 0;
+        this.yStartPosition = 0;
+    }
+
+    public void setStart(Integer startX, Integer startY){
+        if(startX != null){
+            this.xStartPosition = startX;
+        }
+        if(startY != null){
+            this.yStartPosition = startY;
+        }
     }
 
     public void applyTransformation(View onView, float positionOffset) {
         ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) onView.getLayoutParams();
 
-        if (positionOffset <= 0.0001) {
-
-            xStartPosition = onView.getTranslationX();
-            yStartPosition = onView.getTranslationY();
-
-            return;
-        }
+//        if (positionOffset <= 0.0001) {
+//            xStartPosition = onView.getTranslationX();
+//            yStartPosition = onView.getTranslationY();
+//            return;
+//        }
 
         onView.setTranslationX((int)(xPosition * positionOffset) + xStartPosition);
         onView.setTranslationY((int)(yPosition * positionOffset) + yStartPosition);
