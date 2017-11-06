@@ -17,11 +17,43 @@ public class SCViewPager extends ViewPager {
     public SCViewPager(Context context) {
         super(context);
         this.mViewAnimation = new ArrayList<SCViewAnimation>();
+        setListener();
     }
 
     public SCViewPager(Context context, AttributeSet attr) {
         super(context, attr);
         this.mViewAnimation = new ArrayList<SCViewAnimation>();
+        setListener();
+    }
+
+    private void setListener(){
+        this.addOnPageChangeListener(new OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                if(state == SCROLL_STATE_IDLE){
+                    for(int j = getChildCount() ; j >= 0 ; j --){
+                        for (int i = 0; i < mViewAnimation.size(); i++) {
+                            mViewAnimation.get(i).applyAnimation(j, 0);
+                        }
+                    }
+                    for(int j = 0 ; j < getCurrentItem() ; j ++){
+                        for (int i = 0; i < mViewAnimation.size(); i++) {
+                            mViewAnimation.get(i).applyAnimation(j, 1);
+                        }
+                    }
+                }
+            }
+        });
     }
 
     public void addAnimation(SCViewAnimation inViewAnimation) {
@@ -35,7 +67,5 @@ public class SCViewPager extends ViewPager {
         for (int i = 0; i < mViewAnimation.size(); i++) {
             mViewAnimation.get(i).applyAnimation(position, positionOffset);
         }
-
     }
-
 }

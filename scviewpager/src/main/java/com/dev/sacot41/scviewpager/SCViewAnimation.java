@@ -13,6 +13,8 @@ public class SCViewAnimation {
 
     private View view;
     private HashMap<Integer, ArrayList<SCPageAnimation>> pageAnimationMap;
+    private int startX;
+    private int startY;
 
     public SCViewAnimation(View inView) {
         this.view = inView;
@@ -20,8 +22,14 @@ public class SCViewAnimation {
     }
 
     public void startToPosition(Integer xPosition, Integer yPosition) {
-        if (xPosition != null) this.view.setX(xPosition);
-        if (yPosition != null) this.view.setY(yPosition);
+        if (xPosition != null) {
+            this.view.setX(xPosition);
+            startX = xPosition;
+        }
+        if (yPosition != null) {
+            this.view.setY(yPosition);
+            startY = yPosition;
+        }
         this.view.requestLayout();
     }
 
@@ -30,12 +38,20 @@ public class SCViewAnimation {
         if (animationList == null) animationList = new ArrayList<SCPageAnimation>();
         animationList.add(inPageAnimation);
         pageAnimationMap.put(inPageAnimation.page, animationList);
+        if(inPageAnimation instanceof SCPositionAnimation){
+            SCPositionAnimation animation = (SCPositionAnimation) inPageAnimation;
+            animation.setStart(startX, startY);
+            startX += animation.xPosition;
+            startY += animation.yPosition;
+        }
     }
 
     public void applyAnimation(int page, float positionOffset) {
         ArrayList<SCPageAnimation> animationList = pageAnimationMap.get(page);
 
         if (animationList == null) return;
+
+//        System.out.println("page:" + page + "; offset:" + positionOffset);
 
         for(SCPageAnimation animation : animationList) {
             animation.applyTransformation(this.view, positionOffset);
